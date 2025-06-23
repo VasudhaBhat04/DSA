@@ -1,0 +1,36 @@
+//.cpp
+
+int main() {
+    int a[] = {23,44,2,34,67,349,12,1};
+    int n=sizeof(a)/sizeof(a[0]);
+    
+    for(int i=1;i<n;i++){
+        int key = a[i];
+        int j=i-1;
+        while(j>=0 && a[j]>key){
+           a[j+1]=a[j];  //shifting
+           j--;
+           a[j+1]=key;   //key in right spot
+             }}
+     for(int i=0;i<n;i++)         
+    cout<<a[i]<<" ";   
+    return 0;
+}
+
+
+//.py
+
+def insertion_sort(a):
+ for i in range(len(a)):
+    key = a[i]
+    j=i-1
+        
+        
+    while j>=0 and a[j]>key:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=key
+    
+a = [234, 499, 5, 23, 11, 23, 45, 67]
+insertion_sort(a)
+print(a)
